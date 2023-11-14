@@ -1,0 +1,38 @@
+<html lang="en">
+    <head>
+        <title>Pre-Calculus Quiz</title>
+        <meta charset="utf-8">
+        <!-- Import Nexa -->
+        <link href="https://fonts.cdnfonts.com/css/nexa-bold" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js"></script>
+        <!-- Load d3.js -->
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+        <script src="https://mauriciopoppe.github.io/function-plot/js/function-plot.js"></script>
+        <!-- Allows for LaTex -->
+        <script>
+          MathJax = {
+            tex: {
+              inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+              fontCache: 'global'
+            }
+          };
+          </script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+    </head>
+<body>
+    <h1>Welcome to Calculus</h1>
+    <div id = "div">
+    </div>
+    <p id =  "question"> You have probably heard of Calculus before, but what exactly is it? In a nutshell, we can define Calculus as a set of tools that allows us to study real functions, that is, maps \(f:\mathbb{R}\to\mathbb{R}\). The term "set of tools" is important here: most mathematicians would argue that Calculus is, alone, not an area of mathematics, but rather a group of results that derive from bigger fields such as real analysis, topology, and abstract algebra. Such distinction is by no means an attempt to diminish the importance of calculus to most quantitative and empirical sciences: fundamental findings in statistics, biology, physics, economics, and even other areas of mathematics were only possible due to the creation, by Archimedes, Newton, Leibniz, and the many mathematicians that followed them. Nonetheless, before we start Calculus, we need to have a good grasp on the kind of mathematics that it is built on, also known as pre-calculus. To review some of field of study, click on "Next" to start a quiz on pre-calculus.</p>
+    <div id = "quest div">
+    </div>
+    <button id="next" onclick="processNext();">Next</button>
+</body>
+</html>
+
