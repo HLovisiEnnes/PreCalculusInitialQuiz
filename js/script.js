@@ -182,11 +182,15 @@ function createTrueFalse(element, spc_letter, quest_string){
 }
 
 function processSubmitTF(actualValue, spc_letter, explanation){
+
     //process button submit for True/False question
     var button = document.getElementById("btnid_" + spc_letter);
     var form = document.getElementById("form_" + spc_letter)
 
-    button.addEventListener ("click", () => {
+    button.addEventListener ("click", (evt) => {
+        evt.stopPropagation();
+        evt.preventDefault();
+
         var element_explanation_paragraph = document.createElement("p");
         var element_explanation =  document.createTextNode(explanation);
         var radios = document.getElementsByName('tf' + spc_letter);
@@ -276,7 +280,10 @@ function processTextInput2(actualValue1,actualValue2, quest_numb, spc_letter, ex
     var button = document.getElementById("btnid_" + quest_numb + spc_letter);
     var form = document.getElementById("form_" + quest_numb + spc_letter)
 
-    button.addEventListener ("click", () => {
+    button.addEventListener ("click", (evt) => {
+        evt.stopPropagation();
+        evt.preventDefault();
+
         var element_explanation_paragraph = document.createElement("p");
         var element_explanation =  document.createTextNode(explanation);
         var input = document.getElementById( "text" + quest_numb + spc_letter);
@@ -349,7 +356,10 @@ function createMultipleChoice3(element, letter, inequal){
 function processMultipleChoice3(element, explanation, actualValues, typeValues){
     //process button submit for multiple choice question
     var button = document.getElementById('btnid_3');
-    button.addEventListener ("click", () => {
+    button.addEventListener ("click", (evt) => {
+        evt.stopPropagation();
+        evt.preventDefault();
+
         var element_explanation_paragraph = document.createElement("p");
         var element_explanation =  document.createTextNode('');
         element_explanation_paragraph.appendChild(element_explanation);
@@ -538,8 +548,9 @@ function processMultipleChoice4(actualValue, letter, explanation){
     var button = document.getElementById("btnid_4" + letter);
     var form = document.getElementById("form_4" + letter);
 
-    button.addEventListener ("click", () => {
-    console.log('ok')
+    button.addEventListener ("click", (evt) => {
+    evt.stopPropagation();
+    evt.preventDefault();
     
     var element_explanation_paragraph = document.createElement("p");
     var element_explanation =  document.createTextNode(' ');
@@ -595,7 +606,10 @@ function processTextInput5(actualValue1,actualValue2, quest_numb, spc_letter, ex
     var button = document.getElementById("btnid_" + quest_numb + spc_letter);
     var form = document.getElementById("form_" + quest_numb + spc_letter);
 
-    button.addEventListener ("click", () => {
+    button.addEventListener ("click", (evt) => {
+        evt.stopPropagation();
+        evt.preventDefault();
+
         var element_explanation_paragraph = document.createElement("p");
         var element_explanation =  document.createTextNode(explanation);
         var input = document.getElementById( "text" + quest_numb + spc_letter);
@@ -766,8 +780,9 @@ function processMultipleChoice6(actualValue, letter, explanation){
     var button = document.getElementById("btnid_6" + letter);
     var form = document.getElementById("form_6" + letter)
 
-    button.addEventListener ("click", () => {
-        console.log('ok')
+    button.addEventListener ("click", (evt) => {
+        evt.stopPropagation();
+        evt.preventDefault();
         
         var element_explanation_paragraph = document.createElement("p");
         var element_explanation =  document.createTextNode(' ');
@@ -881,7 +896,10 @@ function processInput7(actualValue, letter, explanation){
     var target = document.getElementById("myFunction7_" + letter);
 
 
-    button.addEventListener ("click", () => {
+    button.addEventListener ("click", (evt) => {
+        evt.stopPropagation();
+        evt.preventDefault();
+
         var element_explanation_paragraph = document.createElement("p");
         var element_explanation =  document.createTextNode("");
         element_explanation_paragraph.appendChild(element_explanation);
@@ -1186,8 +1204,9 @@ function processMultipleChoice8(actualValue, letter, explanation){
     var button = document.getElementById("btnid_8" + letter);
     var form = document.getElementById("form_8" + letter)
 
-    button.addEventListener ("click", () => {
-        console.log('ok')
+    button.addEventListener ("click", (evt) => {
+        evt.stopPropagation();
+        evt.preventDefault();
         
         var element_explanation_paragraph = document.createElement("p");
         var element_explanation =  document.createTextNode(' ');
@@ -1297,7 +1316,10 @@ function processTextInput9(actualValue1,actualValue2, letter, explanation){
     var paragraph = document.getElementById("paragraph9_" + letter);
 
 
-    button.addEventListener ("click", () => {
+    button.addEventListener ("click", (evt) => {
+        evt.stopPropagation();
+        evt.preventDefault();
+
         var element_explanation_paragraph = document.createElement("p");
         var element_explanation =  document.createTextNode(explanation);
         var input = document.getElementById("text9_" + letter);
@@ -1424,7 +1446,10 @@ function processTextInput10(actualValue1,actualValue2, letter, explanation, type
     var paragraph = document.getElementById("paragraph10_" + letter);
 
 
-    button.addEventListener ("click", () => {
+    button.addEventListener ("click", (evt) => {
+        evt.stopPropagation();
+        evt.preventDefault();
+        
         var element_explanation_paragraph = document.createElement("p");
         var element_explanation =  document.createTextNode(explanation);
         var input = document.getElementById("text10_" + letter);
